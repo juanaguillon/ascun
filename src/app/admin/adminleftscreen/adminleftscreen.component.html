@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="offset-md-3 col-md-6">
+    <div class="jumbotron">
+      <form (submit)="submitForm($event)" id="admin_left_form">
+
+        <div class="form-group">
+          <label for="first_text">Primer Texto</label>
+          <textarea [(ngModel)]="first_text" name="first_text" id="first_text" cols="30" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="second_text">Segundo Texto</label>
+          <textarea [(ngModel)]="second_text" name="second_text" id="second_text" cols="30" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="second_text">Lista</label>
+          <input [(ngModel)]="currentItem" type="text" id="list_text" name="list_text" class="form-control">
+          <ul class="list-group">
+            <li *ngFor="let item of items" class="list-group-item">{{item}}</li>
+          </ul>
+          <button (click)="addItem()" class="btn btn-dark my-2 btn-sm">Agregar item</button>
+        </div>
+
+        <input type="submit" class="btn btn-success" value="Guardar">
+
+      </form>
+    </div>
+  </div>
+</div>

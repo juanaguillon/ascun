@@ -1,10 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LeftScreenComponent } from './leftscreen/leftscreen.component';
+import { adminRoutes } from './admin/admin.module';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/leftscreen',
+    pathMatch: 'full'
+  },
+  {
+    path:'leftscreen',
+    component: LeftScreenComponent
+  }
+  
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forChild(adminRoutes),
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

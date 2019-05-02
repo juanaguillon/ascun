@@ -1,0 +1,63 @@
+.section_logo{
+  height: 20vh;
+  text-align: center;
+}
+.section_logo .image_logo{
+  height: 100%;
+}
+
+.section_presentation{
+  padding: 20px 10px;
+	border: 1px solid gainsboro;
+	box-shadow: 0 3px 3px #d8d8d8;
+}
+
+.section_parraf{
+  padding: 20px 0;
+	border-top: 2px solid #dcdcdc;
+	margin: 2vh 0;
+	border-bottom: 2px solid #dcdcdc;
+}
+
+.ulist{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list_right li,
+.list_left li{
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list_left li .success_icon,
+.list_right li .success_icon{
+  height: 4.5vh;
+	padding: 5px;
+}
+
+ul.icons_list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.icons_list li{
+  width: 25%;
+  padding: 35px;
+}
+
+ul.icons_list li img{
+  width: 100%;
+}
+
+.silde{
+  height: 100vh;
+	margin-right: -15px;
+	overflow: hidden;
+}
+
+.silde img{
+  height: 100%;
+}
