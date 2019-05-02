@@ -12,7 +12,7 @@ export class AdminLeftScreenComponent implements OnInit {
   currentItem = "";
   first_text = "";
   second_text = "";
-  items = []
+  items = [];
   
   constructor(
     private db:DatabaseService

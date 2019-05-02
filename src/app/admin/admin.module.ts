@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 /* Componenetes */
 import { AdminLeftScreenComponent } from './adminleftscreen/adminleftscreen.component';
 import { AdminComponent } from './admin.component';
+import { AdminSlideComponent } from './adminslide/adminslide.component';
 
 export const adminRoutes:Routes = [
   {
@@ -22,6 +23,10 @@ export const adminRoutes:Routes = [
       {
         path: 'left',
         component: AdminLeftScreenComponent
+      },
+      {
+        path: 'slide',
+        component: AdminSlideComponent
       }
     ]
   }
@@ -30,7 +35,8 @@ export const adminRoutes:Routes = [
 @NgModule({
   declarations: [
     AdminComponent,
-    AdminLeftScreenComponent
+    AdminLeftScreenComponent,
+    AdminSlideComponent
   ],
   imports: [ 
     CommonModule,

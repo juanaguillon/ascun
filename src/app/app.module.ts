@@ -8,7 +8,10 @@ import { AdminModule } from './admin/admin.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {AngularFireStorageModule} from '@angular/fire/storage';
+
 import { DatabaseService } from './services/database.service';
+import { StorageService } from './services/storage.service';
 
 @NgModule({
   declarations: [
@@ -21,10 +24,12 @@ import { DatabaseService } from './services/database.service';
     AdminModule,
     AngularFireModule.initializeApp(environment.fireabse),
     AngularFirestoreModule,
-    DatabaseService
-
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [
+    DatabaseService,
+    StorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

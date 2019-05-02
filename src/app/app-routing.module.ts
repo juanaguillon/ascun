@@ -19,7 +19,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forChild(adminRoutes),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   exports: [RouterModule]
 })

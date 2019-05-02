@@ -18,8 +18,24 @@ export class DatabaseService {
       text2: text2,
       list: list
     }
-    return this.db.doc('documents/' + id ).set( data );
+    return this.db.doc('documents/1' ).set( data );
     
   }
+
+  updateDocument( id:number, data){
+    return this.db.doc('documents/' + id ).update(data);
+  }
+
+  getDoc(id:number, observer = true){    
+
+    if ( observer ){
+      return this.db.doc('documents/' + id ).valueChanges();
+
+    }else{
+      return this.db.doc('documents/' + id ).get().toPromise();
+    }
+  }
+
+  
   
 }
