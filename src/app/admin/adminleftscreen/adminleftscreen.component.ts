@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-adminleftscreen',
@@ -12,7 +14,9 @@ export class AdminLeftScreenComponent implements OnInit {
   second_text = "";
   items = []
   
-  constructor() { }
+  constructor(
+    private db:DatabaseService
+  ) { }
 
   addItem( ){
     if ( this.currentItem == "" ){
@@ -25,7 +29,11 @@ export class AdminLeftScreenComponent implements OnInit {
   }
 
   submitForm( e ){
-    e.preventDefault();    
+    e.preventDefault();   
+    this.db.saveDocument(this.first_text, this.second_text, this.items)
+    .then( f => {
+      alert('Guardado correctamente');
+    })
   }
 
   ngOnInit(): void { }
